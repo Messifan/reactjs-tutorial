@@ -6,8 +6,6 @@ const getAge = () => {
     return 18
 }
 
-
-
 //map render;
 //list need a unpeated number/string key to improve performance
 const songs = [
@@ -47,16 +45,14 @@ const getHtag = (type) => {
 function JsExpression () {
     return (
         <div>
-            {name}
-            {getAge()}
+            <h1>---JS Expression---</h1>
+            parameters: {name} {getAge()}
             <ul>
                 {songs.map(s => <li key={s.id}> {s.name} </li>)}
             </ul>
             {flag ? (<span>flag = true span</span>) : null}
             {false && (<span>false span not show</span>)}
-            {getHtag(1)}
-            {getHtag(2)}
-            {getHtag(3)}
+            {getHtag(1)}{getHtag(2)}{getHtag(3)}
 
         </div>
     )
